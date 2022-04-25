@@ -12,6 +12,7 @@
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [License](#license)
+  * [Walkthroughvideo](#walkthroughvideo)
   
   ## Installation
   
@@ -26,6 +27,9 @@
   ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
   MIT-yellow
   
+  ## Walkthroughvideo
+  https://github.com/Jiyeon31/SNSapi/blob/main/walkthrough-video/walkthrough-video-1.mp4
+  https://github.com/Jiyeon31/SNSapi/blob/main/walkthrough-video/walkthrough-video-2.mp4
   
   ## Contributing
   
