@@ -24,11 +24,11 @@ router
 router
 .route('/:userId')
 .post(addThought)
+.delete(removeThought)
 
 router
 .route('/:userId/:thoughtId')
 .put(updateThought)
-.delete(removeThought)
 
 // /api/thoughts/:thoughtId/reactions
 router
