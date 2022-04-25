@@ -62,8 +62,18 @@ const userController = {
   // delete user
   deleteUser({ params }, res) {
     User.findOneAndDelete({ _id: params.userId })
-      .then(dbUserData => res.json(dbUserData))
-      .catch(err => res.json(err))
+      .then(dbUserData => {
+        if(!dbUserData) {
+          res.status(404).json({ message: 'No user found with this id'});
+          return;
+        }
+        // remove any thought from this user
+        Thought.deleteMany({ thoughtId : {$in: dbUserData.thoughtId}})
+          .then(() => {
+          res.json({message: "Successfully deleted user"});
+        })
+        .catch(err => res.status(400).json(err));
+    })
   },
   
   // add a friend to user
